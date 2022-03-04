@@ -18,7 +18,7 @@ router
 .post(addReaction)
 
 router
-.route('/:thoughtId/:reactionId')
+.route('/:thoughtId/:reactions')
 .delete(removeReaction)
 
 
