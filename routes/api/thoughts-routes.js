@@ -5,21 +5,22 @@ const {getAllThoughts, getSingleThought, addThought, updateThought, deleteThough
 router
 .route('/')
 .get(getAllThoughts)
+.post(addThought)
 
 router
 .route('/:id')
 .get(getSingleThought)
-.post(addThought)
 .put(updateThought)
 .delete(deleteThought)
 
 router
-.route('/reaction/:id')
+.route('/:thoughtId/reactions')
 .post(addReaction)
 
 router
-.route('/:thoughtId/:reactions')
+.route('/:thoughtId/reactions/:reactionsId')
 .delete(removeReaction)
 
 
 module.exports = router
+
